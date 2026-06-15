@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador 3D (OBJ e glTF)</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="controls">
+        <h1>Visualizador de Arquivos 3D</h1>
+        <label for="file-input" class="custom-file-upload">
+            Selecionar arquivo .OBJ ou .GLTF
+        </label>
+        <input type="file" id="file-input" accept=".obj,.gltf,.glb">
+        <p id="file-name">Nenhum arquivo carregado</p>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <!-- Importa o Three.js e os Loaders utilizando ES Modules -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://jsdelivr.net",
+                "three/addons/": "https://jsdelivr.net"
+            }
+        }
+    </script>
+    <script type="module" src="script/script.js"></script>
+</body>
+</html>
